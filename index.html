@@ -5,8 +5,11 @@
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="stylesheet" href="./assets/css/style.css"></div>
 		<link href="https://fonts.googleapis.com/css?family=Tangerine:400,700&display=swap" rel="stylesheet">
+		<title>
+			Joshua and Maria Wedding Invitation
+		</title>
 	</head>
-	<body>
+	<body onload="hideQuotation()">
 		<div class="container">
 			<div class="quotation">
 				<p class="quotation-written">Such is my love, to thee I so belong.</p>
@@ -15,13 +18,16 @@
 				<p>William Shakespeare, Sonnet 88</p>
 			</div>
 
-			<div class="invite">You are cordially invited to the wedding of</div>
-			<div class="invite-names">
-				<p>Christopher Joshua</p>
-				<p class="amp">&amp;</p>
-				<p>Claudia Maria Kusnadi</p>
+			<div class="hero">
+				<div class="invite-names">
+					<p>Christopher Joshua</p>
+					<p class="amp">&amp;</p>
+					<p>Claudia Maria Kusnadi</p>
+				</div>
+				<div class="invite-photo">
+					<img src='./assets/images/2D8A3834-min.jpg' alt=''/>
+				</div>
 			</div>
-			<p>TEST</p>
 			<div class="g_maps-box">
 				<div class="g_maps-container">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.718367466997!2d106.89801131489341!3d-6.16845466216841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f52f5edd13a9%3A0xb783891860de5954!2sKlub%20Kelapa%20Gading!5e0!3m2!1sen!2sid!4v1567932843893!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen="" class="g_maps"></iframe>
@@ -29,4 +35,9 @@
 			</div>	
 		</div>
 	</body>	
+	<script type="text/javascript">
+		function hideQuotation(){
+			document.body.classList.add('js--hide-quotation')
+		}
+	</script>
 </html>
