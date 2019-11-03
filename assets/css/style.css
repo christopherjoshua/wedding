@@ -12,11 +12,19 @@ html
 	line-height: 1;
 	font-family: "Times New Roman", "Courier", serif;
 }
+body
+{
+	background-color: rgba(0, 26, 45, 1);
+}
 
 .container
 {
+	position: relative;
+	display: block;
+	max-width: 1920px;
 	width: 100%;
 	padding: 1rem;
+	margin: auto;
 	background: #ffffff;
 }
 .quotation
@@ -32,6 +40,15 @@ html
 	color: #ffffff;
 	opacity: 1;
 	z-index: 99;
+}
+.quotation-content
+{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	max-width: 90%;
+	transform: translate(-50%, -50%);
 }
 .js--hide-quotation
 {
