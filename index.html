@@ -9,6 +9,14 @@
 		<title>
 			Joshua and Maria Wedding Invitation
 		</title>
+		<noscript>
+			<style>
+			.quotation, .add-calendar, #functional
+			{
+				display: none!important;
+			}
+			</style>
+		</noscript>
 	</head>
 	<body onload="hideQuotation()">
 		<div class="container">
@@ -66,12 +74,12 @@
 					<p>Kelapa Gading Timur, North Jakarta</p>
 
 				</div>
-				<div class="event-container event-container--full">
+				<div class="event-container event-container--full" id="functional">
 					<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding Reception&dates=20191130T190000/20191130T210000&details=Wedding Reception at CatholicGading Agung - Klub Kelapa Gading&location=Jalan Boulevard Raya Blok KGC, Kelapa Gading, RW.1, Klp. Gading Tim., Kec. Klp. Gading, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14240" class="add-calendar">Save The Date</a>
 					<h3>Direction</h3>
 					<div class="g_maps-box">
 						<div class="g_maps-container">
-							<iframe width="320" height="320" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.718367466997!2d106.89801131489341!3d-6.16845466216841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f52f5edd13a9%3A0xb783891860de5954!2sKlub%20Kelapa%20Gading!5e0!3m2!1sen!2sid!4v1567932843893!5m2!1sen!2sid" frameborder="0" style="border:0;" allowfullscreen="" class="g_maps"></iframe>
+							<iframe width="320" height="320" src="" frameborder="0" style="border:0;" allowfullscreen="" class="g_maps" id="g_maps"></iframe>
 						</div>
 					</div>
 				</div>
@@ -82,7 +90,8 @@
 	<script type="text/javascript">
 		function hideQuotation(){
 			// setTimeout(function(){
-				document.body.classList.add('js--hide-quotation')
+				document.body.classList.add('js--hide-quotation');
+				document.querySelector("#g_maps").src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.718367466997!2d106.89801131489341!3d-6.16845466216841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f52f5edd13a9%3A0xb783891860de5954!2sKlub%20Kelapa%20Gading!5e0!3m2!1sen!2sid!4v1567932843893!5m2!1sen!2sid";
 			// }, 2000)
 		}
 	</script>
