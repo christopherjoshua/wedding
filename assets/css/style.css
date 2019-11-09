@@ -137,7 +137,7 @@ body
 }
 .g_maps-box
 {
-	margin: 15px auto 0;
+	margin: 15px auto 30px;
 	/*width: 100%;*/
 	/*height: 100%;*/
 	max-width: 640px;
@@ -201,7 +201,7 @@ body
 	display: block;
 	display: flex;
 	flex-wrap: wrap;
-	padding: 30px 15px;
+	padding: 30px 15px 15px;
 	margin: auto;
 	max-width: 880px;
 	background: #fff;
@@ -216,7 +216,7 @@ body
 	left: 50%;
 
 }*/
-.event-container.event-container--full p
+.event-container--full p
 {
 	font-family: "Tangerine";
 	font-size: 3rem;
@@ -231,11 +231,11 @@ body
 	text-align: left;
 	font-family: "Volkhov";
 }
-.event-container.event-container--left
+.event-container--left
 {
 	text-align: right;
 }
-.event-container.event-container--full
+.event-container--full
 {
 	text-align: center;
 	flex: 1 0 100%;
@@ -311,7 +311,7 @@ body
 .event-container h3
 {
 	font-size: 2rem;
-	margin: 15px 0;
+	margin: 0 0 15px;
 	font-weight: 700;
 }
 .event-container h2 ~ p
@@ -324,6 +324,11 @@ body
 .cptlz
 {
 	text-transform: uppercase;
+}
+
+.g_maps-box ~ p
+{
+	margin-top: 30px;
 }
 
 @media(max-width: 640px){
@@ -352,7 +357,7 @@ body
 		transform: none;
 		font-size: 3rem;
 	}
-	.event-container.event-container--full p
+	.event-container--full p
 	{
 		font-size: 2.4rem;
 		max-width: 80%;
@@ -363,12 +368,12 @@ body
 		flex: 1 0 100%;
 		text-align: center;
 	}
-	.event-container.event-container--full
+	.event-container--full
 	{
 		padding-left: 0;
 		padding-right: 0;
 	}
-	.event-container.event-container--left
+	.event-container--left
 	{
 		text-align: center;
 	}
