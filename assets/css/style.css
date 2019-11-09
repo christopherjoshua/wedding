@@ -11,7 +11,7 @@ html
 {
 	font-size: 15px;
 	line-height: 1;
-	font-family: "Times New Roman", "Courier", serif;
+	font-family: "Volkhov", "Times New Roman", "Courier", serif;
 }
 body
 {
@@ -26,6 +26,7 @@ body
 	max-width: 1920px;
 	width: 100%;
 	padding: 1rem;
+	padding-bottom: 2rem;
 	margin: auto;
 	background-color: rgba(0, 26, 45, 1);	
 }
@@ -50,6 +51,8 @@ body
 	top: 50%;
 	width: 100%;
 	max-width: 90%;
+	opacity: 0;
+	font-family: "Volkhov";
 	transform: translate(-50%, -50%);
 }
 .js--hide-quotation
@@ -58,9 +61,14 @@ body
 }
 .js--hide-quotation .quotation
 {
-	transition: 1.2s;
+	transition: 1s 2s;
 	opacity: 0;
 	pointer-events: none;
+}
+.js--hide-quotation .quotation-content
+{
+	transition: 0.3s;
+	opacity: 1;
 }
 .hero
 {
@@ -112,16 +120,20 @@ body
 {
 	position: absolute;
 	content: '';
-}
-.quotation-separator:before
-{
-	left: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
 	height: 2px;
 	border-radius: 10px;
-	width: 100%;
+	width: 0;
 	background-color: #ffffff;
 	top: 50%;
 	margin-top: -1px
+}
+
+.js--hide-quotation .quotation-separator:before
+{
+	transition: 0.6s 0.5s;
+	width: 100%;
 }
 .g_maps-box
 {
@@ -163,7 +175,7 @@ body
 	width: 100%;
 	font-size: 4rem;
 	color: #ecbe27;
-	background-color: rgba(255,255,255,0.3);
+	background-color: rgba(0,0,0,0.3);
 	font-family: "Tangerine";
 	transform: translate(0, -50%);
 }
@@ -172,7 +184,7 @@ body
 	margin: 0.6rem auto;
 	line-height: 1;
 	text-align: center;
-	text-shadow: 1px 1px 0 #4e4208;
+	text-shadow: 1px 1px 1px #4e4208;
 	font-weight: 700;
 }
 .invite-names .amp
@@ -217,7 +229,7 @@ body
 	flex: 1 0 50%;
 	padding: 0 25px 25px;
 	text-align: left;
-	font-family: "Arvo";
+	font-family: "Volkhov";
 }
 .event-container.event-container--left
 {
@@ -242,6 +254,7 @@ body
 	font-size: 1.1rem;
 	box-shadow: 0 2px 4px rgba(0,0,0,.1);
 	text-decoration: none;
+	font-family: "Volkhov";
 }
 .date-container
 {
@@ -258,7 +271,7 @@ body
 	font-size: 2rem;
 	display: inline-block;
 	color: #ecbe27;
-	text-shadow: 1px 1px 0 #4e4208;
+	text-shadow: 1px 1px 1px #4e4208;
 }
 .date-container p:nth-child(1)
 {
@@ -292,7 +305,7 @@ body
 	font-weight: 400;
 	font-size:  3rem;
 	color: #ecbe27;
-	text-shadow: 1px 1px 0 #4e4208;
+	text-shadow: 1px 1px 1px #4e4208;
 	font-family: "Tangerine";
 }
 .event-container h3
@@ -316,12 +329,15 @@ body
 @media(max-width: 640px){
 	.container
 	{
-		padding: 0;
+		padding: 0 15px 15px;
 	}
 	.hero
 	{
 		height: auto;
-		margin: 0;
+	}
+	.invitation
+	{
+		padding: 15px 15px 0;
 	}
 	.invite-photo
 	{
@@ -345,6 +361,11 @@ body
 	{
 		flex: 1 0 100%;
 		text-align: center;
+	}
+	.event-container.event-container--full
+	{
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.event-container.event-container--left
 	{
